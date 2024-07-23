@@ -1,0 +1,123 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication1;
+import java.util.Scanner;
+/**
+ *
+ * @author user
+ */
+public class JavaApplication1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner S = new Scanner(System.in);
+        String str = S.nextLine();
+        char[] c = str.toCharArray();
+        int l = c.length;
+        boolean flag = true;
+        int last = l-1;
+        for(int i=0;i<l;i++){
+        if(c[i] != c[last]){
+            flag = false;
+            break;
+        }
+        if(i == last){
+           break;
+        }
+ 
+        }
+        
+        System.out.println((flag ==  true)?"Palendrome":"Not Palendrome");
+        
+    
+}
+  
+}
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication1;
+import java.util.Scanner;
+import java.lang.StringBuffer;
+/**
+ *
+ * @author user
+ */
+public class JavaApplication1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    Scanner S= new Scanner(System.in);
+    String str = S.nextLine();
+    str = str.toLowerCase();
+    String[] sa = str.split(",");
+    
+    for(int i=0;i<sa.length;i++){
+    if(i != sa.length -1){
+      StringBuffer t1 = new StringBuffer(sa[i]);
+      StringBuffer t2 = new StringBuffer(sa[i+1]);
+      
+      if(t1.charAt(t1.length()-1) == t2.charAt(0)){
+          t1.deleteCharAt(t1.length()-1);
+          sa[i] = t1.toString();
+      }
+    }   
+    }
+    str = "";
+    for(String j : sa){
+      str += j;
+    }
+    System.out.print(str);
+    }
+}
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication1;
+import java.util.Scanner;
+import java.lang.StringBuffer;
+/**
+ *
+ * @author user
+ */
+public class JavaApplication1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    Scanner S= new Scanner(System.in);
+    String str = S.nextLine();
+    int n = str.length();
+    str = str.substring(0, 2);
+    for(int i=0;i<n;i++){
+    System.out.print(str);
+    }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------
+
